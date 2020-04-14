@@ -46,6 +46,7 @@ public class UserLoginServlet extends HttpServlet {
         if(userDao.Validate(username, password)) {
             HttpSession session = request.getSession();
             User user = userDao.getUserByDB(username);
+            session.setAttribute("userId",user.id);
             session.setAttribute("name", user.nome);
             session.setAttribute("tipo", user.tipo);
             //response.sendRedirect("/home.jsp");

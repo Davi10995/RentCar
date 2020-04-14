@@ -1,5 +1,6 @@
 package com.management.util;
 
+import com.management.model.Prenotazione;
 import com.management.model.User;
 import com.management.model.Veicolo;
 import org.hibernate.SessionFactory;
@@ -36,11 +37,13 @@ public class HibernateUtil {
 
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+               // settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+                settings.put(Environment.HBM2DDL_AUTO, "none");
 
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
                 configuration.addAnnotatedClass(Veicolo.class);
+                configuration.addAnnotatedClass(Prenotazione.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
                 System.out.println("Hibernate Java Config serviceRegistry created");

@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>RENTCAR LOGIN</title>
-    <link href="/css/loginNavbar.css" rel="stylesheet" type="text/css">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="topnav">

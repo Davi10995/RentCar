@@ -12,9 +12,20 @@
 <head>
     <%@ page isELIgnored="false" %>
     <title>User Management</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div class="topnav">
+        <a  class="active" href="home.jsp">Home</a>
+        <a href="#">Profilo</a>
+        <a href="parcoAuto">Parco Auto</a>
+        <div class="login-container">
+            <p class="userName">Welcome ${name}</p>
+            <form action="logout" method="post" >
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
     <ul>
         <li><a href="home.jsp">Home</a></li>
         <li><a href="/logout">Logout</a></li>

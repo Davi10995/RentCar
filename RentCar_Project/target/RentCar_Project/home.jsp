@@ -5,7 +5,7 @@
 <head>
     <%@ page isELIgnored="false" %>
     <title>User Management</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <%
@@ -13,13 +13,17 @@
         response.sendRedirect("/login.jsp");
     %>
 
-    <ul>
-        <li><a href="home.jsp">Home</a></li>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/parcoAuto">Parco Auto</a></li>
-        <li class="userName">Welcome ${name}</li>
-    </ul>
-
+    <div class="topnav">
+        <a  class="active" href="home.jsp">Home</a>
+        <a href="#">Profilo</a>
+        <a href="parcoAuto">Parco Auto</a>
+        <div class="login-container">
+            <p class="userName">Welcome ${name}</p>
+            <form action="logout" method="post" >
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
     <div style="text-align: center;">
         <h1>User Management</h1>
     </div>

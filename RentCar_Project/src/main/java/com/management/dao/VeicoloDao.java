@@ -1,15 +1,13 @@
 package com.management.dao;
 
-import com.management.model.User;
-import com.management.util.HibernateUtil;
 import com.management.model.Veicolo;
-
-import java.util.List;
+import com.management.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Transactional
 public class VeicoloDao {

@@ -1,7 +1,6 @@
 package com.management.web;
 
 import com.management.dao.VeicoloDao;
-import com.management.model.Veicolo;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,10 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 @WebServlet("/deleteVehicle")
 public class DeleteVehicleServlet extends HttpServlet {

@@ -6,7 +6,7 @@
 <head>
     <%@ page isELIgnored="false" %>
     <title>User Management</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <%
@@ -14,12 +14,16 @@
         response.sendRedirect("/login.jsp");
     %>
 
-    <ul>
-        <li><a href="home.jsp">Home</a></li>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/parcoAuto">Parco Auto</a></li>
-        <li class="userName">Welcome ${name}</li>
-    </ul>
+    <div class="topnav">
+        <a href="home.jsp">Home</a>
+        <a href="#">Profilo</a>
+        <a href="/parcoAuto">Parco Auto</a>
+        <div class="login-container">
+            <form action="/logout" method="post" >
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
     <div style="text-align: center;">
         <h1>User Management</h1>
     </div>
@@ -36,22 +40,25 @@
 
             <c:forEach var="user" items="${listUser}">
                 <tr>
+                    <c:if test= "${user.tipo =='Customer' }">
                     <td><c:out value="${user.cf}" /></td>
                     <td><c:out value="${user.nome}" /></td>
                     <td><c:out value="${user.cognome}" /></td>
                     <td><c:out value="${user.tipo}" /></td>
                     <td><c:out value="${user.data}" /></td>
-                    <c:if test= "${user.tipo =='Customer' }">
+
                         <td>
                             <a href="${pageContext.request.contextPath}/editForm?id=<c:out value='${user.id}' />">Edit</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="${pageContext.request.contextPath}/delete?id=<c:out value='${user.id}' />">Delete</a>
+
+                            <a href="${pageContext.request.contextPath}/delete?id=<c:out value='${user.id}' />">Visualizza Prenotazioni</a>
                         </td>
                     </c:if>
                 </tr>
             </c:forEach>
         </table>
-        <a href="/newUser.jsp">Add New User</a>
+        <a href="./newUser.jsp">Add New User</a>
     </div>
 </body>
 </html>

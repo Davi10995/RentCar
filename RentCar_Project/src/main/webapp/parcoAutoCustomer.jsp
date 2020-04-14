@@ -9,16 +9,25 @@
 <html>
 <head>
     <title>Title</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
-
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <ul>
-        <li><a href="home.jsp">Home</a></li>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/parcoAuto">Parco Auto</a></li>
-        <li class="userName">Welcome ${name}</li>
-    </ul>
+<%
+    if(session.getAttribute("name") == null)
+        response.sendRedirect("/login.jsp");
+%>
+
+<div class="topnav">
+    <a  class="active" href="home.jsp">Home</a>
+    <a href="#">Profilo</a>
+    <a href="parcoAuto">Parco Auto</a>
+    <div class="login-container">
+        <p class="userName">Welcome ${name}</p>
+        <form action="logout" method="post" >
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
 
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
@@ -35,11 +44,6 @@
                 <td><c:out value="${veicolo.modello}" /></td>
                 <td><c:out value="${veicolo.casaCostrutt}" /></td>
                 <td><c:out value="${veicolo.annoImm}" /></td>
-                <td>
-                    <a href="${pageContext.request.contextPath}/editVehicle?id=<c:out value='${user.id}' />">Edit</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="${pageContext.request.contextPath}/deleteVehicle?id=<c:out value='${user.id}' />">Delete</a>
-                </td>
             </tr>
         </c:forEach>
     </table>

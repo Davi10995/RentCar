@@ -58,9 +58,6 @@ public class User {
     public int getId() {
         return id;
     }
-    public void setId(String cf) {
-        this.id = id;
-    }
     public String getCf() {
         return cf;
     }
