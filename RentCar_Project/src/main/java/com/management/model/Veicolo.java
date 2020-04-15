@@ -23,6 +23,9 @@ public class Veicolo{
     @Column(name="AnnoImm")
     public String annoImm;
 
+    @Column(name="Prenotabile")
+    public boolean prenotabile;
+
 //    @OneToMany(cascade={CascadeType.ALL})
 //    @JoinColumn(name="idPrenotazione")
 //    private List<Prenotazione> prenotazioni;
@@ -80,4 +83,6 @@ public class Veicolo{
         this.annoImm = annoImm;
     }
 
+    public void setPrenotabile(boolean prenotabile) { this.prenotabile = prenotabile; }
+    public boolean getPrenotabile() { return prenotabile; }
 }

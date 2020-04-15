@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="topnav">
-        <a  class="active" href="home.jsp">Home</a>
+        <a  class="active" href="list">Home</a>
         <a href="#">Profilo</a>
         <a href="parcoAuto">Parco Auto</a>
         <div class="login-container">
@@ -26,12 +26,6 @@
             </form>
         </div>
     </div>
-    <ul>
-        <li><a href="home.jsp">Home</a></li>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/parcoAuto">Parco Auto</a></li>
-        <li class="userName">Welcome ${name}</li>
-    </ul>
     <form action="newUser" method="post" >
         CF:<input type="text" name="cf"/><br/><br/>
         Nome:<input type="text" name="nome"/><br/><br/>

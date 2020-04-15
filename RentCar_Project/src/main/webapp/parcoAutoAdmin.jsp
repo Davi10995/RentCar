@@ -14,7 +14,7 @@
         %>
 
         <div class="topnav">
-            <a  class="active" href="home.jsp">Home</a>
+            <a  class="active" href="list">Home</a>
             <a href="#">Profilo</a>
             <a href="parcoAuto">Parco Auto</a>
             <div class="login-container">
@@ -44,9 +44,9 @@
                         <td><c:out value="${veicolo.casaCostrutt}" /></td>
                         <td><c:out value="${veicolo.annoImm}" /></td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/editVehicle?id=<c:out value='${user.id}' />">Edit</a>
+                            <a href="${pageContext.request.contextPath}/editVehicleForm?id=<c:out value='${veicolo.id}' />">Modifica</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="${pageContext.request.contextPath}/deleteVehicle?id=<c:out value='${user.id}' />">Delete</a>
+                            <a href="${pageContext.request.contextPath}/deleteVehicle?id=<c:out value='${veicolo.id}' />">Elimina</a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -49,6 +49,13 @@ public class Prenotazione {
 
     public Prenotazione(){    }
 
+    public Prenotazione(User user, Veicolo veicolo, Date dataInizio, Date dataFine){
+        this.user = user;
+        this.veicolo = veicolo;
+        this.dataInizio = dataInizio;
+        this.dataFine = dataFine;
+    }
+
 
     public Date getDataInizio(){
         return this.dataInizio;

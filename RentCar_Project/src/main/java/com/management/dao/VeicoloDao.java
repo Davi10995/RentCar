@@ -66,7 +66,6 @@ public class VeicoloDao {
             Veicolo veicolo = session.get(Veicolo.class, id);
             if (veicolo != null) {
                 session.delete(veicolo);
-                System.out.println("user is deleted");
             }
 
             // commit transaction
@@ -87,7 +86,7 @@ public class VeicoloDao {
             // start a transaction
             transaction = session.beginTransaction();
             // get an user object
-            Query query = session.createQuery("from Veicolo u where u.idVeicolo = :id");
+            Query query = session.createQuery("from Veicolo u where u.id = :id");
             query.setParameter("id", id);
             veicoli = query.list();
             // commit transaction

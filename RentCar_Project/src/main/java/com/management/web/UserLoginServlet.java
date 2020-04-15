@@ -50,7 +50,7 @@ public class UserLoginServlet extends HttpServlet {
                 session.setAttribute("name", user.nome);
                 session.setAttribute("tipo", user.tipo);
                 //response.sendRedirect("/home.jsp");
-                dispatcher = request.getRequestDispatcher("/home.jsp");
+                dispatcher = request.getRequestDispatcher("/list");
             } else {
                 dispatcher = request.getRequestDispatcher("/index.jsp");
                 //response.sendRedirect("/index.jsp");

@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 style="text-align: center">OPERAZIONE COMPLETATA CON SUCCESSO </h1>
-   <a style="align-content: center" href="home.jsp"><input type="submit" value="Torna alla Home" /></a>
+   <a style="align-content: center" href="list"><input type="submit" value="Torna alla Home" /></a>
 </body>
 </html>

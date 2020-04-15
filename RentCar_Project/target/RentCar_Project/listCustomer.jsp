@@ -14,13 +14,12 @@
     %>
 
     <ul>
-        <a  class="active" href="home.jsp">Home</a>
+        <a  class="active" href="./list">Home</a>
         <li><a href="/logout">Logout</a></li>
         <li><a href="/parcoAuto">Parco Auto</a></li>
         <li class="userName">Welcome ${name}</li>
     </ul>
     <div style="text-align: center;">
-        <h1>User Management</h1>
     </div>
     <div align="center">
         <table border="1" cellpadding="5">

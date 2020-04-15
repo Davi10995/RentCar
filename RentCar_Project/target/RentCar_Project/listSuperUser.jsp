@@ -15,9 +15,9 @@
     %>
 
     <div class="topnav">
-        <a  class="active" href="home.jsp">Home</a>
+        <a  class="active" href="list">Home</a>
         <a href="#">Profilo</a>
-        <a href="/parcoAuto">Parco Auto</a>
+        <a href="parcoAuto">Parco Auto</a>
         <div class="login-container">
             <p class="userName">Welcome ${name}</p>
             <form action="/logout" method="post" >
@@ -26,9 +26,9 @@
         </div>
     </div>
     <div style="text-align: center;">
-        <h1>User Management</h1>
     </div>
     <div align="center">
+
         <table border="1" cellpadding="5">
             <caption><h2>List of Users</h2></caption>
             <tr>
@@ -38,7 +38,7 @@
                 <th>Tipo</th>
                 <th>Data</th>
             </tr>
-
+            <button onclick="window.location.href = './newUser.jsp';">Aggiungi Utente</button>
             <c:forEach var="user" items="${listUser}">
                 <tr>
                     <c:if test= "${user.tipo =='Customer' }">
@@ -59,7 +59,6 @@
                 </tr>
             </c:forEach>
         </table>
-        <a href="./newUser.jsp">Add New User</a>
     </div>
 </body>
 </html>

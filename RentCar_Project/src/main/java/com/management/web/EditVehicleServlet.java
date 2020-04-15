@@ -30,24 +30,32 @@ public class EditVehicleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            deleteVehicle(request,response);
+            editVehicle(request,response);
             RequestDispatcher dispatcher = null;
             dispatcher = request.getRequestDispatcher("/success.jsp");
             dispatcher.forward(request, response);
-        } catch (Exception ex) {
-            throw new ServletException(ex);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new ServletException(e);
         }
     }
 
 
-    private void deleteVehicle(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, IOException, ParseException {
-        String targa =  request.getParameter("Targa");
-        String modello = (String) request.getAttribute("Modello");
-        String casa = (String) request.getAttribute("casaCostrutt");
-        String anno = (String) request.getAttribute("annoImm");
-        Veicolo veicolo = new Veicolo(targa, modello, casa, anno);
-        veicolo.id = Integer.parseInt(request.getParameter("id"));
-        veicoloDao.updateVehicle(veicolo);
+    private void editVehicle(HttpServletRequest request, HttpServletResponse response)
+            throws ParseException, ServletException, IOException {
+        if(request.getParameter("prenotabile").equals("true")) {
+            String targa = request.getParameter("targa");
+            String modello = request.getParameter("modello");
+            String casa = request.getParameter("casa");
+            String anno = request.getParameter("anno");
+            Veicolo veicolo = new Veicolo(targa, modello, casa, anno);
+            veicolo.id = Integer.parseInt(request.getParameter("id"));
+            veicoloDao.updateVehicle(veicolo);
+        }
+        else{
+            RequestDispatcher dispatcher = null;
+            dispatcher = request.getRequestDispatcher("/vehicleReservedError.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 }

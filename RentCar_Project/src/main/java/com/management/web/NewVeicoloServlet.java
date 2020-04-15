@@ -50,6 +50,7 @@ public class NewVeicoloServlet extends HttpServlet {
         String casa = request.getParameter("casa");
         String anno = request.getParameter("anno");
         Veicolo veicolo = new Veicolo(targa, modello, casa, anno);
+        veicolo.prenotabile = true;
         veicoloDao.saveVeicolo(veicolo);
     }
 }

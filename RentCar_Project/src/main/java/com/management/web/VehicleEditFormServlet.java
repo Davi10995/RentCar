@@ -1,7 +1,8 @@
 package com.management.web;
 
-import com.management.dao.UserDao;
+import com.management.dao.VeicoloDao;
 import com.management.model.User;
+import com.management.model.Veicolo;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,15 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet("/editVehicleForm")
+public class VehicleEditFormServlet extends HttpServlet {
 
-@WebServlet("/editForm")
-public class UserEditFormServlet extends HttpServlet {
-    private UserDao userDao;
+    private VeicoloDao veicoloDao;
 
-    public void init() {
-        userDao = new UserDao();
+    public void init(){
+        veicoloDao = new VeicoloDao();
     }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
@@ -30,18 +30,18 @@ public class UserEditFormServlet extends HttpServlet {
         try {
             RequestDispatcher dispatcher = null;
             showEditForm(request, response);
-            dispatcher = request.getRequestDispatcher("/edit.jsp");
+            dispatcher = request.getRequestDispatcher("/vehicleEdit.jsp");
             dispatcher.forward(request, response);
-        } catch (Exception ex) {
-            throw new ServletException(ex);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new ServletException(e);
         }
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response){
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userDao.getUserById(id);
-        request.setAttribute("user", existingUser);
+        Veicolo vehicle = veicoloDao.getVeicoloById(id);
+        request.setAttribute("veicolo", vehicle);
 
     }
-
 }
