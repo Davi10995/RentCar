@@ -4,7 +4,6 @@
 <html>
     <head>
         <%@ page isELIgnored="false" %>
-        <title>User Management</title>
         <link href="css/navbar.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -48,6 +47,12 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="${pageContext.request.contextPath}/deleteVehicle?id=<c:out value='${veicolo.id}' />">Elimina</a>
                         </td>
+                        <td>
+                        <c:if test = "${veicolo.prenotabile == 'true'}">
+                            <a href="${pageContext.request.contextPath}/insertReservation?id=<c:out value='${veicolo.id}' />">Prenota</a>
+                        </c:if>
+                        </td>
+                        <h1><c:out value="${veicolo.prenotabile}"/></h1>
                     </tr>
                 </c:forEach>
             </table>

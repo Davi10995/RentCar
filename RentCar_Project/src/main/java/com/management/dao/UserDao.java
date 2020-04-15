@@ -123,7 +123,7 @@ public class UserDao {
             // start a transaction
             transaction = session.beginTransaction();
             // get an user object
-            Query query = session.createQuery("from User u where u.idUser = :id");
+            Query query = session.createQuery("from User u where u.id = :id");
             query.setParameter("id", id);
             listOfUser = query.list();
             // commit transaction

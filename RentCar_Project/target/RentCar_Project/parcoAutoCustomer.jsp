@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: david
@@ -44,6 +45,10 @@
                 <td><c:out value="${veicolo.modello}" /></td>
                 <td><c:out value="${veicolo.casaCostrutt}" /></td>
                 <td><c:out value="${veicolo.annoImm}" /></td>
+                <c:if test = "${veicolo.prenotabile == 'true'}">
+                    <a href="${pageContext.request.contextPath}/prenotaVeicolo?id=<c:out value='${veicolo.id}' />">Prenota</a>
+                </c:if>
+
             </tr>
         </c:forEach>
     </table>

@@ -39,6 +39,7 @@ public class NewReservationServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             RequestDispatcher dispatcher = null;
+            insertReservation(request,response);
             dispatcher = request.getRequestDispatcher("/success.jsp");
             dispatcher.forward(request, response);
 
@@ -46,6 +47,10 @@ public class NewReservationServlet extends HttpServlet {
             e.printStackTrace();
             throw new ServletException(e);
 
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
     private void insertReservation(HttpServletRequest request, HttpServletResponse response)
@@ -55,7 +60,7 @@ public class NewReservationServlet extends HttpServlet {
         VeicoloDao veicolodao = new VeicoloDao();
         HttpSession session = request.getSession();
         int vehicleId = Integer.parseInt(request.getParameter("id"));
-        int userId = Integer.parseInt((String)session.getAttribute("userId"));
+        int userId = (int) session.getAttribute("userId");
         User user = userdao.getUserById(userId);
         Veicolo veicolo = veicolodao.getVeicoloById(vehicleId);
 

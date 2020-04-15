@@ -11,7 +11,6 @@
 <html>
     <head>
         <%@ page isELIgnored="false" %>
-        <title>User Management</title>
         <link href="css/navbar.css" rel="stylesheet" type="text/css">
     </head>
     <body>
