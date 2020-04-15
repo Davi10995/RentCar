@@ -6,8 +6,7 @@ import javax.persistence.*;
 @Table(name="Veicolo", schema="rentcar")
 public class Veicolo{
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+
     @Column(name="Id", updatable = false,nullable=false)
     public int id;
 
@@ -24,6 +23,24 @@ public class Veicolo{
     @Column(name="AnnoImm")
     public String annoImm;
 
+//    @OneToMany(cascade={CascadeType.ALL})
+//    @JoinColumn(name="idPrenotazione")
+//    private List<Prenotazione> prenotazioni;
+//    public List<Prenotazione> getPrenotazioni(){
+//        return prenotazioni;
+//    }
+//    public void setPrenotazioni(List<Prenotazione> prenotazioni){
+//        this.prenotazioni = prenotazioni;
+//    }
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Veicolo(){}
 
@@ -36,12 +53,6 @@ public class Veicolo{
 
 
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
     public String getTarga() {
         return targa;
     }

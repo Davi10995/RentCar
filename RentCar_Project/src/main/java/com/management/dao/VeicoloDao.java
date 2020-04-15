@@ -87,7 +87,7 @@ public class VeicoloDao {
             // start a transaction
             transaction = session.beginTransaction();
             // get an user object
-            Query query = session.createQuery("from Veicolo u where u.id = :id");
+            Query query = session.createQuery("from Veicolo u where u.idVeicolo = :id");
             query.setParameter("id", id);
             veicoli = query.list();
             // commit transaction

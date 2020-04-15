@@ -8,6 +8,8 @@
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+<%--    DA CAMBIARE  --%>
     <%
     if(session.getAttribute("name") == null)
         response.sendRedirect("/login.jsp");
@@ -31,26 +33,12 @@
         <table border="1" cellpadding="5">
             <h2>List of Users</h2>
             <tr>
-<%--                <th>CF</th>--%>
-<%--                <th>Nome</th>--%>
-<%--                <th>Cognome</th>--%>
-<%--                <th>Tipo</th>--%>
-<%--                <th>Data</th>--%>
-<%--            </tr>--%>
-            <td>
-                <form action="list">
-                    <input TYPE="submit" value="List of Users">
-                </form>
-            </td>
-<%--            <c:forEach var="user" items="${requestScope.listUser}">--%>
-<%--                <tr>--%>
-<%--                    <td><c:out value="${user.cf}" /></td>--%>
-<%--                    <td><c:out value="${user.nome}" /></td>--%>
-<%--                    <td><c:out value="${user.cognome}" /></td>--%>
-<%--                    <td><c:out value="${user.tipo}" /></td>--%>
-<%--                    <td><c:out value="${user.data}" /></td>--%>
+                <td>
+                    <form action="list">
+                        <input TYPE="submit" value="List of Users">
+                    </form>
+                </td>
             </tr>
-<%--            </c:forEach>--%>
         </table>
     </div>
 </body>

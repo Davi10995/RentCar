@@ -1,5 +1,7 @@
 package com.management.model;
 
+import com.management.model.Veicolo;
+import com.management.model.User;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,45 +9,47 @@ import java.util.Date;
 @Table(name="Prenotazione")
 public class Prenotazione {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPrenotazione", updatable = false, nullable = false)
-    public int id;
 
-    @Column (name = "fk_user")
-    public int userId;
-    @Column (name = "fk_veicolo")
-    public int veicoloId;
+
+    @Column(name = "Id", updatable = false, nullable = false)
+    public int id;
+    public User user;
+    public Veicolo veicolo;
     @Column (name = "dataInizio")
     public Date dataInizio;
     @Column (name = "dataFine")
     public Date dataFine;
 
-
-    public Prenotazione(){    }
-
-    public Prenotazione(int user, int veicolo, Date inizio, Date fine){
-        this.userId = user;
-        this.veicoloId = veicolo;
-        this.dataInizio = inizio;
-        this.dataFine = fine;
+    @ManyToOne(targetEntity = User.class, fetch = FetchType.EAGER)
+    @JoinColumn( name="fk_user" , referencedColumnName="Id", insertable = false, updatable = false)
+    public User getUser(){
+        return this.user;
+    }
+    public void setUser(User user){
+        this.user= user;
     }
 
+    @ManyToOne(targetEntity=Veicolo.class, fetch=FetchType.EAGER)
+    @JoinColumn( name="fk_veicolo" ,  referencedColumnName="Id" , insertable = false, updatable = false)
+    public Veicolo getVeicolo(){
+        return this.veicolo;
+    }
+    public void setVeicolo(Veicolo veicolo){
+        this.veicolo = veicolo;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
-    public int getUserId(){
-        return this.userId;
+    public void setId(int id) {
+        this.id= id;
     }
-    public void setUserId(int userId){
-        this.userId = userId;
-    }
-    public int getVeicoloId(){
-        return this.veicoloId;
-    }
-    public void setVeicoloId(int veicoloId){
-        this.veicoloId = veicoloId;
-    }
+
+    public Prenotazione(){    }
+
+
     public Date getDataInizio(){
         return this.dataInizio;
     }

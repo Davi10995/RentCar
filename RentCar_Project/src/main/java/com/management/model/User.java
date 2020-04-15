@@ -1,14 +1,13 @@
 package com.management.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
 @Table(name="User")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+
     @Column(name="Id", updatable = false,nullable=false)
     public int id;
 
@@ -30,6 +29,25 @@ public class User {
     @Column(name="Data")
     public Date data;
 
+//    @OneToMany(cascade={CascadeType.ALL})
+//    @JoinColumn(name="idPrenotazione")
+//    private List<Prenotazione> prenotazioni;
+//    public List<Prenotazione> getPrenotazioni(){
+//        return prenotazioni;
+//    }
+//    public void setPrenotazioni(List<Prenotazione> prenotazioni){
+//        this.prenotazioni = prenotazioni;
+//    }
+
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+    public void setId(int id){
+        this.id=id;
+    }
     public User() {
     }
 
@@ -55,9 +73,7 @@ public class User {
         this.data = data;
     }
 
-    public int getId() {
-        return id;
-    }
+
     public String getCf() {
         return cf;
     }

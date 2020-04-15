@@ -909,7 +909,7 @@
       <DataType>bigint|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="284" name="idPrenotazione">
+    <column id="288" parent="284" name="Id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
@@ -938,7 +938,7 @@
     </column>
     <key id="293" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>idPrenotazione</ColNames>
+      <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="294" parent="285" name="Id">

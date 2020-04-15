@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="RentCar_Project" />
+          <factory-entry name="RentCar_Project" value="eeaf6de0-d71c-473f-ae41-f278df0ee222" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

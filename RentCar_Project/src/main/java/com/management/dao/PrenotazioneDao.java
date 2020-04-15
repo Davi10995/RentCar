@@ -110,7 +110,7 @@ public class PrenotazioneDao {
             // start a transaction
             transaction = session.beginTransaction();
             // get an user object
-            Query query = session.createQuery("from Prenotazione p where p.userId = :id");
+            Query query = session.createQuery("from Prenotazione p where p.user.id = :id");
             query.setParameter("id", id);
             prenotazioni = query.list();
             // commit transaction

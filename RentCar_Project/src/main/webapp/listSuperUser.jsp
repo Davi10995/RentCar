@@ -19,6 +19,7 @@
         <a href="#">Profilo</a>
         <a href="/parcoAuto">Parco Auto</a>
         <div class="login-container">
+            <p class="userName">Welcome ${name}</p>
             <form action="/logout" method="post" >
                 <button type="submit">Logout</button>
             </form>
@@ -52,7 +53,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="${pageContext.request.contextPath}/delete?id=<c:out value='${user.id}' />">Delete</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="${pageContext.request.contextPath}/delete?id=<c:out value='${user.id}' />">Visualizza Prenotazioni</a>
+                            <a href="${pageContext.request.contextPath}/reservationList?id=<c:out value='${user.id}' />">Visualizza Prenotazioni</a>
                         </td>
                     </c:if>
                 </tr>

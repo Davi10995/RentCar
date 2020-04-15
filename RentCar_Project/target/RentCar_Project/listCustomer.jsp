@@ -14,7 +14,7 @@
     %>
 
     <ul>
-        <li><a href="home.jsp">Home</a></li>
+        <a  class="active" href="home.jsp">Home</a>
         <li><a href="/logout">Logout</a></li>
         <li><a href="/parcoAuto">Parco Auto</a></li>
         <li class="userName">Welcome ${name}</li>
