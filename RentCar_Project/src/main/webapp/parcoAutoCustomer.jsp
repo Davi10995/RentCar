@@ -45,10 +45,11 @@
                 <td><c:out value="${veicolo.modello}" /></td>
                 <td><c:out value="${veicolo.casaCostrutt}" /></td>
                 <td><c:out value="${veicolo.annoImm}" /></td>
-                <c:if test = "${veicolo.prenotabile == 'true'}">
-                    <a href="${pageContext.request.contextPath}/prenotaVeicolo?id=<c:out value='${veicolo.id}' />">Prenota</a>
-                </c:if>
-
+                <td>
+                    <c:if test = "${veicolo.prenotabile == 'true'}">
+                        <a href="${pageContext.request.contextPath}/insertReservation?id=<c:out value='${veicolo.id}' />">Prenota</a>
+                    </c:if>
+                </td>
             </tr>
         </c:forEach>
     </table>

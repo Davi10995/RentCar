@@ -6,7 +6,6 @@ html, body
     padding:0;
 }
 
-
 /* Style the navbar */
 .topnav {
     overflow: hidden;
@@ -73,6 +72,11 @@ img {
     right:0;
     bottom:0;
     margin:auto;
+}
+
+#image{
+    height: 20px;
+    padding-top: 5px;
 }
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */

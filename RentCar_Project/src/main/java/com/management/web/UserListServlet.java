@@ -34,12 +34,12 @@ public class UserListServlet extends HttpServlet {
             List<User> userList = userDao.getAllUser();
             request.setAttribute("listUser", userList);
             RequestDispatcher dispatcher = null;
-            if(session.getAttribute("tipo").equals("SuperUser")) {
+//            if(session.getAttribute("tipo").equals("SuperUser")) {
                 dispatcher = request.getRequestDispatcher("/listSuperUser.jsp");
-            }
-            else{
-                dispatcher = request.getRequestDispatcher("/listCustomer.jsp");
-            }
+//            }
+//            else{
+//                dispatcher = request.getRequestDispatcher("/listCustomer.jsp");
+//            }
             dispatcher.forward(request, response);
         } catch ( Exception ex) {
             throw new ServletException(ex);

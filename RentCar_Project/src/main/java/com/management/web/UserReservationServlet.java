@@ -1,9 +1,7 @@
 package com.management.web;
 
-import com.management.dao.UserDao;
-import com.management.dao.VeicoloDao;
-import com.management.model.User;
-import com.management.model.Veicolo;
+import com.management.dao.PrenotazioneDao;
+import com.management.model.Prenotazione;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,15 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.List;
 
-@WebServlet("/parcoAuto")
-public class VeicoloListServlet extends HttpServlet {
+@WebServlet("/userReservation")
+public class UserReservationServlet  extends HttpServlet {
 
-    private VeicoloDao veicoloDao;
+    private PrenotazioneDao prenDao;
 
     public void init() {
-        veicoloDao = new VeicoloDao();
+        prenDao = new PrenotazioneDao();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -32,19 +32,17 @@ public class VeicoloListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            HttpSession session = request.getSession();
-            List<Veicolo> veicoli = veicoloDao.getAllVeicoli();
-            request.setAttribute("listVeicoli", veicoli);
             RequestDispatcher dispatcher = null;
-//            if(session.getAttribute("tipo").equals("SuperUser")) {
-            dispatcher = request.getRequestDispatcher("/parcoAutoAdmin.jsp");
-//            }
-//            else{
-//                dispatcher = request.getRequestDispatcher("/parcoAutoCustomer.jsp");
-//            }
+            HttpSession session = request.getSession();
+            int idUser = (int)session.getAttribute("userId");
+            List<Prenotazione> list = prenDao.getReservationByUserId(idUser);
+            request.setAttribute("listPrenotazioni", list);
+            dispatcher = request.getRequestDispatcher("/userReservation.jsp");
             dispatcher.forward(request, response);
-        } catch ( Exception ex) {
-            throw new ServletException(ex);
+
+        } catch (ServletException e) {
+            e.printStackTrace();
+            throw new ServletException(e);
         }
     }
 }

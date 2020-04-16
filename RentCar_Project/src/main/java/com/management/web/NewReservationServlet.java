@@ -56,14 +56,12 @@ public class NewReservationServlet extends HttpServlet {
     private void insertReservation(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ParseException {
 
-        UserDao userdao = new UserDao();
         VeicoloDao veicolodao = new VeicoloDao();
         HttpSession session = request.getSession();
         int vehicleId = Integer.parseInt(request.getParameter("id"));
         int userId = (int) session.getAttribute("userId");
-        User user = userdao.getUserById(userId);
         Veicolo veicolo = veicolodao.getVeicoloById(vehicleId);
-
+        veicolo.prenotabile = false;
         String[] dataInizio = request.getParameterValues("dataInizio");
         SimpleDateFormat availDate = new SimpleDateFormat("yyyy-MM-dd");
         Date inizio = availDate.parse(dataInizio[0]);
@@ -71,8 +69,9 @@ public class NewReservationServlet extends HttpServlet {
         SimpleDateFormat availDate2 = new SimpleDateFormat("yyyy-MM-dd");
         Date fine = availDate2.parse(dataFine[0]);
 
-        Prenotazione prenotazione = new Prenotazione(user, veicolo, inizio, fine);
+        Prenotazione prenotazione = new Prenotazione(userId, vehicleId, inizio, fine);
         prenDao.saveReservation(prenotazione);
+        veicolodao.updateVehicle(veicolo);
         }
 
 

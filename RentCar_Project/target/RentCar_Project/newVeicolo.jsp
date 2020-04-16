@@ -14,17 +14,17 @@
         <link href="css/navbar.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="topnav">
-            <a  class="active" href="list">Home</a>
-            <a href="#">Profilo</a>
-            <a href="parcoAuto">Parco Auto</a>
-            <div class="login-container">
-                <p class="userName">Welcome ${name}</p>
-                <form action="logout" method="post" >
-                    <button type="submit">Logout</button>
-                </form>
-            </div>
+    <div class="topnav">
+        <a  class="active" href="list">Home</a>
+        <a href="profilo.jsp">Profilo</a>
+        <a href="parcoAuto">Parco Auto</a>
+        <div class="login-container">
+            <p class="userName">Welcome ${name}</p>
+            <form action="logout" method="post" >
+                <button type="submit">Logout</button>
+            </form>
         </div>
+    </div>
         <br/><br/><br/><br/>
         <form action="newVeicolo" method="post" >
             Targa:<input type="text" name="targa"/><br/><br/>

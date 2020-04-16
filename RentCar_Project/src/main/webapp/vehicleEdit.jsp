@@ -16,7 +16,7 @@
     <body>
     <div class="topnav">
         <a  class="active" href="list">Home</a>
-        <a href="#">Profilo</a>
+        <a href="profilo.jsp">Profilo</a>
         <a href="parcoAuto">Parco Auto</a>
         <div class="login-container">
             <p class="userName">Welcome ${name}</p>

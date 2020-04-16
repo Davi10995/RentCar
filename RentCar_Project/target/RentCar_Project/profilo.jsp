@@ -8,9 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+<div class="topnav">
+    <a  class="active" href="list">Home</a>
+    <a href="#">Profilo</a>
+    <a href="parcoAuto">Parco Auto</a>
+    <div class="login-container">
+        <p class="userName">Welcome ${name}</p>
+        <form action="logout" method="post" >
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+<button onclick="window.location.href = 'userReservation';">Le mie Prenotazioni</button>
 </body>
 </html>

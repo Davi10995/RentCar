@@ -13,12 +13,16 @@ public class Prenotazione {
 
     @Column(name = "Id", updatable = false, nullable = false)
     public int id;
-    public User user;
-    public Veicolo veicolo;
     @Column (name = "dataInizio")
     public Date dataInizio;
     @Column (name = "dataFine")
     public Date dataFine;
+    @Column (name = "fk_user")
+    public int fk_user;
+    @Column (name = "fk_veicolo")
+    public int fk_veicolo;
+    public User user;
+    public Veicolo veicolo;
 
     @ManyToOne(targetEntity = User.class, fetch = FetchType.EAGER)
     @JoinColumn( name="fk_user" , referencedColumnName="Id", insertable = false, updatable = false)
@@ -49,14 +53,17 @@ public class Prenotazione {
 
     public Prenotazione(){    }
 
-    public Prenotazione(User user, Veicolo veicolo, Date dataInizio, Date dataFine){
-        this.user = user;
-        this.veicolo = veicolo;
+    public Prenotazione(int fk_user, int fk_veicolo, Date dataInizio, Date dataFine){
+        this.fk_user = fk_user;
+        this.fk_veicolo = fk_veicolo;
         this.dataInizio = dataInizio;
         this.dataFine = dataFine;
     }
 
-
+    public void setFk_user(int fk_user){ this.fk_user = fk_user;}
+    public int getFk_user(){ return fk_user;}
+    public void setFk_veicolo(int fk_veicolo){ this.fk_veicolo = fk_veicolo;}
+    public int getFk_veicolo(){ return fk_veicolo;}
     public Date getDataInizio(){
         return this.dataInizio;
     }

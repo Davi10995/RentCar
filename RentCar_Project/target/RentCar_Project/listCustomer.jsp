@@ -13,12 +13,17 @@
         response.sendRedirect("/login.jsp");
     %>
 
-    <ul>
-        <a  class="active" href="./list">Home</a>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/parcoAuto">Parco Auto</a></li>
-        <li class="userName">Welcome ${name}</li>
-    </ul>
+    <div class="topnav">
+        <a  class="active" href="list">Home</a>
+        <a href="profilo.jsp">Profilo</a>
+        <a href="parcoAuto">Parco Auto</a>
+        <div class="login-container">
+            <p class="userName">Welcome ${name}</p>
+            <form action="logout" method="post" >
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
     <div style="text-align: center;">
     </div>
     <div align="center">

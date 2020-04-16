@@ -1013,6 +1013,7 @@
     <column id="307" parent="286" name="Prenotabile">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="308" parent="286" name="PRIMARY">

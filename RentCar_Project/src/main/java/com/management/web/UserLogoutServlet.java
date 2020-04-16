@@ -35,7 +35,7 @@ public class UserLogoutServlet extends  HttpServlet{
             HttpSession session = request.getSession();
             session.invalidate();
             RequestDispatcher dispatcher = null;
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("./index.jsp");
 
 
         } catch ( Exception ex) {

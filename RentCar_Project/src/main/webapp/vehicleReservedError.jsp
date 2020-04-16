@@ -11,7 +11,20 @@
     <title style="align-content: center">Success</title>
 </head>
 <body>
-<h1 style="text-align: center">IL VEICOLO RISULTA PRENOTATO E NON MODIFICABILE ORA</h1>
-<a style="align-content: center" href="list"><input type="submit" value="Torna alla Home" /></a>
+<div class="topnav">
+    <a  class="active" href="list">Home</a>
+    <a href="profilo.jsp">Profilo</a>
+    <a href="parcoAuto">Parco Auto</a>
+    <div class="login-container">
+        <p class="userName">Welcome ${name}</p>
+        <form action="logout" method="post" >
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+<div align="center">
+    <h1 style="text-align: center">IL VEICOLO RISULTA PRENOTATO E NON MODIFICABILE ORA</h1>
+    <a style="align-content: center" href="list"><input type="submit" value="Torna alla Home" /></a>
+</div>
 </body>
 </html>
