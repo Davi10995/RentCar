@@ -9,11 +9,6 @@
 </head>
 <body>
 
-<%--    DA CAMBIARE  --%>
-    <%
-    if(session.getAttribute("name") == null)
-        response.sendRedirect("/login.jsp");
-    %>
 
     <div class="topnav">
         <a  class="active" href="home.jsp">Home</a>
@@ -28,11 +23,11 @@
     </div>
     <div align="center">
         <table border="1" cellpadding="5">
-            <h2>List of Users</h2>
+            <h2>BENVENUTO IN RENTALCAR BY DAVIDE CORDA</h2>
             <tr>
                 <td>
                     <form action="list">
-                        <input TYPE="submit" value="List of Users">
+                        <input TYPE="submit" value="ENTRA NEL SITO">
                     </form>
                 </td>
             </tr>

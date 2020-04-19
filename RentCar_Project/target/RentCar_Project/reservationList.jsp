@@ -10,7 +10,7 @@
 <html>
 <head>
     <%@ page isELIgnored="false" %>
-    <title>Title</title>
+    <title>Lista Prenotazioni</title>
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>

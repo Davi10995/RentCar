@@ -10,6 +10,7 @@
 <html>
 <head>
     <%@ page isELIgnored="false" %>
+    <title>Prenotazioni User</title>
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>

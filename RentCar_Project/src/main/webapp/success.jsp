@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title style="align-content: center">Success</title>
+    <title>Success</title>
 </head>
 <body>
 <h1 style="text-align: center">OPERAZIONE COMPLETATA CON SUCCESSO </h1>

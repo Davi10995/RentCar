@@ -26,14 +26,16 @@
         </form>
     </div>
 </div>
+    <div align="center">
+        <h2>Nuovo Utente</h2>
+        <form action="newUser" method="post" >
+            CF:<input type="text" name="cf"/><br/><br/>
+            Nome:<input type="text" name="nome"/><br/><br/>
+            Cognome:<input type="text" name="cognome"/><br/><br/>
+            Password:<input type="text" name="password"/><br/><br/>
+            Data:<input type="date" name="data" max="datetime local"/><br/><br/>
+            <input type="submit" value="Save" />
+        </form>
     </div>
-    <form action="newUser" method="post" >
-        CF:<input type="text" name="cf"/><br/><br/>
-        Nome:<input type="text" name="nome"/><br/><br/>
-        Cognome:<input type="text" name="cognome"/><br/><br/>
-        Password:<input type="text" name="password"/><br/><br/>
-        Data:<input type="date" name="data" max="datetime local"/><br/><br/>
-        <input type="submit" value="Save" />
-    </form>
 </body>
 </html>

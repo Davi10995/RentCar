@@ -25,6 +25,7 @@
             </form>
         </div>
     </div>
+    <h2>Nuovo Veicolo</h2>
         <br/><br/><br/><br/>
         <form action="newVeicolo" method="post" >
             Targa:<input type="text" name="targa"/><br/><br/>

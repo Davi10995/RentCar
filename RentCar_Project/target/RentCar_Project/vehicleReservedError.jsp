@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title style="align-content: center">Success</title>
+    <title style="align-content: center">Error</title>
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="topnav">

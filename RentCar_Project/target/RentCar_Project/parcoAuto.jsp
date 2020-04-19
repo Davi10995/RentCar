@@ -19,11 +19,12 @@
             </div>
         </div>
         <div align="center">
-            <c:if test="${sessionScope.tipo == 'SuperUser'}">
-            <button onclick="window.location.href = './newVeicolo.jsp';">Aggiungi Veicolo</button>
-            </c:if>
+
             <table border="1" cellpadding="5">
                 <caption><h2>Veicoli</h2></caption>
+                <c:if test="${sessionScope.tipo == 'SuperUser'}">
+                    <button onclick="window.location.href = './newVeicolo.jsp';">Aggiungi Veicolo</button>
+                </c:if>
                 <tr>
                     <th>Targa</th>
                     <th>Modello</th>

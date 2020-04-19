@@ -49,11 +49,9 @@ public class UserLoginServlet extends HttpServlet {
                 session.setAttribute("userId", user.id);
                 session.setAttribute("name", user.nome);
                 session.setAttribute("tipo", user.tipo);
-                //response.sendRedirect("/home.jsp");
-                dispatcher = request.getRequestDispatcher("/list");
+                dispatcher = request.getRequestDispatcher("/home.jsp");
             } else {
                 dispatcher = request.getRequestDispatcher("/index.jsp");
-                //response.sendRedirect("/index.jsp");
             }
             dispatcher.forward(request, response);
 

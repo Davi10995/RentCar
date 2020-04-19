@@ -32,16 +32,11 @@ public class VeicoloListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            HttpSession session = request.getSession();
             List<Veicolo> veicoli = veicoloDao.getAllVeicoli();
             request.setAttribute("listVeicoli", veicoli);
             RequestDispatcher dispatcher = null;
-//            if(session.getAttribute("tipo").equals("SuperUser")) {
-            dispatcher = request.getRequestDispatcher("/parcoAutoAdmin.jsp");
-//            }
-//            else{
-//                dispatcher = request.getRequestDispatcher("/parcoAutoCustomer.jsp");
-//            }
+            dispatcher = request.getRequestDispatcher("/parcoAuto.jsp");
+
             dispatcher.forward(request, response);
         } catch ( Exception ex) {
             throw new ServletException(ex);

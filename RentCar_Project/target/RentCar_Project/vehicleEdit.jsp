@@ -10,7 +10,7 @@
 <html>
     <head>
         <%@ page isELIgnored="false" %>
-        <title>User Management</title>
+        <title>Modifica Veicolo</title>
         <link href="css/navbar.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -26,6 +26,8 @@
         </div>
     </div>
     <br/><br/><br/><br/>
+    <div align="center">
+        <h2>Modifica Veicolo</h2>
         <form action="editVehicle" method="post" >
             <input type="hidden" name="id" value="<c:out value='${veicolo.id}' />">
             <input type="hidden" name="prenotabile" value="<c:out value='${veicolo.prenotabile}' />">
@@ -48,5 +50,6 @@
             Anno Immatricolazione:<input type="text" name="anno" value="<c:out value='${veicolo.annoImm}' />"/><br/><br/>
             <input type="submit" value="Save" />
         </form>
+    </div>
     </body>
 </html>
