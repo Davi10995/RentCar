@@ -99,6 +99,27 @@ public class VeicoloDao {
         }
         return veicoli.get(0);
     }
+    public Veicolo getVeicoloByTarga(String targa) {
+
+        Transaction transaction = null;
+        List < Veicolo > veicoli = null;
+        try (Session session = openSession()) {
+            // start a transaction
+            transaction = session.beginTransaction();
+            // get an user object
+            Query query = session.createQuery("from Veicolo u where u.targa = :targa");
+            query.setParameter("targa", targa);
+            veicoli = query.list();
+            // commit transaction
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+        return veicoli.get(0);
+    }
 
     /**
      * Get all Veicoli

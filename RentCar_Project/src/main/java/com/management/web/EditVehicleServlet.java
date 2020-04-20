@@ -43,6 +43,8 @@ public class EditVehicleServlet extends HttpServlet {
 
     private void editVehicle(HttpServletRequest request, HttpServletResponse response)
             throws ParseException, ServletException, IOException {
+        RequestDispatcher dispatcher = null;
+
         if(request.getParameter("prenotabile").equals("true")) {
             String targa = request.getParameter("targa");
             String modello = request.getParameter("modello");
@@ -50,12 +52,30 @@ public class EditVehicleServlet extends HttpServlet {
             String anno = request.getParameter("anno");
             Veicolo veicolo = new Veicolo(targa, modello, casa, anno);
             veicolo.id = Integer.parseInt(request.getParameter("id"));
-            veicoloDao.updateVehicle(veicolo);
+            if(validate(veicolo)){
+                veicoloDao.updateVehicle(veicolo);
+            }else {
+                dispatcher = request.getRequestDispatcher("/errorVehicle.jsp");
+                dispatcher.forward(request,response);
+            }
+
         }
         else{
-            RequestDispatcher dispatcher = null;
             dispatcher = request.getRequestDispatcher("/vehicleReservedError.jsp");
             dispatcher.forward(request, response);
         }
+    }
+
+    private boolean validate(Veicolo u){
+        if(u.targa.equals("") || u.modello.equals("") || u.casaCostrutt.equals("") || u.annoImm.equals("")){
+            return false;
+        }else {
+            Veicolo veicolo = veicoloDao.getVeicoloById(u.id);
+            if (veicoloDao.getVeicoloByTarga(u.targa) != null && !veicolo.targa.equals(u.targa))
+                return false;
+            return true;
+        }
+
+
     }
 }

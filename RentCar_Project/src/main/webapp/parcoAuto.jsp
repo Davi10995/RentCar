@@ -19,9 +19,8 @@
             </div>
         </div>
         <div align="center">
-
+            <h2>Veicoli</h2>
             <table border="1" cellpadding="5">
-                <caption><h2>Veicoli</h2></caption>
                 <c:if test="${sessionScope.tipo == 'SuperUser'}">
                     <button onclick="window.location.href = './newVeicolo.jsp';">Aggiungi Veicolo</button>
                 </c:if>
@@ -53,7 +52,6 @@
                     </tr>
                 </c:forEach>
             </table>
-<%--            <a href="./newVeicolo.jsp">Aggiungi un Veicolo</a>--%>
         </div>
     </body>
 </html>

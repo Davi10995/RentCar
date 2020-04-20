@@ -25,56 +25,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebe5be3e-da26-4818-913e-2df1afc60e5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Screen/Immagine1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screen/Immagine2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screen/Immagine3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screen/Immagine4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screen/Immagine5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errorUser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errorVehicle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/UserListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/UserListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/UserLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/VeicoloListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/VeicoloListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/dao/VeicoloDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/dao/VeicoloDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/EditVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/EditVehicleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/NewVeicoloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/NewVeicoloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/UserEditFormServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/UserEditFormServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/UserEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/UserEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/management/web/newUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/management/web/newUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/delete.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listCustomer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listSuperUser.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/newUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/newUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/newVeicolo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/newVeicolo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/parcoAutoAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/parcoAuto.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/parcoAutoCustomer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profilo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profilo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reservationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reservationList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/parcoAuto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/parcoAuto.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userReservation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userReservation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/vehicleEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vehicleEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vehicleReservedError.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vehicleReservedError.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserLoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/VeicoloListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/VeicoloListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/dao/VeicoloDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/dao/VeicoloDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/EditVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/EditVehicleServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/NewVeicoloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/NewVeicoloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserEditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/UserEditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/newUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/WEB-INF/classes/com/management/web/newUserServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RentCar_Project/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/delete.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RentCar_Project/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/listCustomer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/listSuperUser.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RentCar_Project/newUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/newUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/newVeicolo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/newVeicolo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/parcoAutoAdmin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/parcoAutoCustomer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/profilo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/profilo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/reservationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/reservationList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/searchBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/userReservation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/userReservation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/parcoAuto.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/parcoAuto.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RentCar_Project/vehicleEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/vehicleEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RentCar_Project/vehicleReservedError.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/RentCar_Project/vehicleReservedError.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/UserListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/UserListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/UserLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/UserLoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/VeicoloListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/VeicoloListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/management/dao/VeicoloDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/dao/VeicoloDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/EditVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/EditVehicleServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/NewVeicoloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/NewVeicoloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/UserEditServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/UserEditServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/management/web/newUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/management/web/newUserServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +68,8 @@
         <option value="Tag Library Descriptor" />
         <option value="jsf" />
         <option value="Class" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -267,7 +247,8 @@
       <workItem from="1587033776646" duration="9262000" />
       <workItem from="1587054452075" duration="4099000" />
       <workItem from="1587112639261" duration="24857000" />
-      <workItem from="1587305906789" duration="6067000" />
+      <workItem from="1587305906789" duration="6274000" />
+      <workItem from="1587387189800" duration="5321000" />
     </task>
     <servers />
   </component>
@@ -367,78 +348,78 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="391" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1586182903659" />
-    <state width="411" height="466" key="DebuggerActiveHint" timestamp="1586247567356">
+    <state width="416" height="466" key="DebuggerActiveHint" timestamp="1587391488722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="411" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1586247567356" />
+    <state width="416" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1587391488722" />
     <state x="975" y="257" key="FileChooserDialogImpl" timestamp="1587307571447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="975" y="257" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587307571447" />
-    <state width="1293" height="272" key="GridCell.Tab.0.bottom" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.0.bottom" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.0.center" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.0.center" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.0.left" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.0.left" timestamp="1587392522249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.0.right" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522249" />
+    <state width="1293" height="272" key="GridCell.Tab.0.right" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.1.bottom" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.1.bottom" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.1.center" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.1.center" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.1.left" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.1.left" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.1.right" timestamp="1587311982403">
+    <state width="1293" height="272" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.1.right" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982403" />
-    <state width="1293" height="272" key="GridCell.Tab.2.bottom" timestamp="1587311982404">
+    <state width="1293" height="272" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.2.bottom" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982404" />
-    <state width="1293" height="272" key="GridCell.Tab.2.center" timestamp="1587311982404">
+    <state width="1293" height="272" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.2.center" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982404" />
-    <state width="1293" height="272" key="GridCell.Tab.2.left" timestamp="1587311982404">
+    <state width="1293" height="272" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.2.left" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982404" />
-    <state width="1293" height="272" key="GridCell.Tab.2.right" timestamp="1587311982404">
+    <state width="1293" height="272" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.2.right" timestamp="1587392522250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587311982404" />
-    <state width="1293" height="272" key="GridCell.Tab.3.bottom" timestamp="1587307529779">
+    <state width="1293" height="272" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587392522250" />
+    <state width="1293" height="272" key="GridCell.Tab.3.bottom" timestamp="1587391788709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587307529779" />
-    <state width="1293" height="272" key="GridCell.Tab.3.center" timestamp="1587307529778">
+    <state width="1293" height="272" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587391788709" />
+    <state width="1293" height="272" key="GridCell.Tab.3.center" timestamp="1587391788709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587307529778" />
-    <state width="1293" height="272" key="GridCell.Tab.3.left" timestamp="1587307529778">
+    <state width="1293" height="272" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587391788709" />
+    <state width="1293" height="272" key="GridCell.Tab.3.left" timestamp="1587391788709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587307529778" />
-    <state width="1293" height="272" key="GridCell.Tab.3.right" timestamp="1587307529778">
+    <state width="1293" height="272" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587391788709" />
+    <state width="1293" height="272" key="GridCell.Tab.3.right" timestamp="1587391788709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="272" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587307529778" />
+    <state width="1293" height="272" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587391788709" />
     <state x="360" y="350" key="Maven.ArtifactSearchDialog" timestamp="1586169745143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -459,6 +440,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="737" y="455" width="591" height="240" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1586507201677" />
+    <state x="690" y="281" key="extract.method.dialog" timestamp="1587389381159">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="281" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587389381159" />
     <state x="342" y="222" key="new project wizard" timestamp="1586181579056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -505,6 +490,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/management/web/UserReservationServlet.java</url>
           <line>34</line>
           <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/management/web/UserEditServlet.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/management/web/UserDeleteRequestServlet.java</url>

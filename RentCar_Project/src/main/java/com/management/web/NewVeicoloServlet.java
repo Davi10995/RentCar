@@ -44,13 +44,31 @@ public class NewVeicoloServlet extends HttpServlet {
 
 
     private void inserUser(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, IOException, ParseException {
+            throws SQLException, IOException, ParseException, ServletException {
+        RequestDispatcher dispatcher = null;
         String targa = request.getParameter("targa");
         String modello = request.getParameter("modello");
         String casa = request.getParameter("casa");
         String anno = request.getParameter("anno");
         Veicolo veicolo = new Veicolo(targa, modello, casa, anno);
         veicolo.prenotabile = true;
-        veicoloDao.saveVeicolo(veicolo);
+        if(validate(veicolo)){
+            veicoloDao.saveVeicolo(veicolo);
+        }else {
+            dispatcher = request.getRequestDispatcher("/errorVehicle.jsp");
+            dispatcher.forward(request,response);
+        }
+    }
+
+    private boolean validate(Veicolo u){
+        if(u.targa.equals("") || u.modello.equals("") || u.casaCostrutt.equals("") || u.annoImm.equals("")){
+            return false;
+        }else {
+            if(veicoloDao.getVeicoloByTarga(u.targa) != null)
+                return false;
+            return true;
+        }
+
+
     }
 }

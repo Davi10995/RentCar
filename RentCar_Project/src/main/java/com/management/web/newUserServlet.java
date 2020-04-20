@@ -42,7 +42,8 @@ public class newUserServlet extends HttpServlet {
 
 
     private void inserUser(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, IOException, ParseException {
+            throws SQLException, IOException, ParseException, ServletException {
+        RequestDispatcher dispatcher = null;
         String cf = request.getParameter("cf");
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
@@ -51,7 +52,25 @@ public class newUserServlet extends HttpServlet {
         String[] availableDate = request.getParameterValues("data");
         SimpleDateFormat availDate = new SimpleDateFormat("yyyy-MM-dd");
         Date data = availDate.parse(availableDate[0]);
+
         User user = new User(cf, nome, cognome, password, tipo, data);
-        userDao.saveUser(user);
+        if(validate(user)){
+            userDao.saveUser(user);
+        }else {
+            dispatcher = request.getRequestDispatcher("/errorUser.jsp");
+            dispatcher.forward(request,response);
+        }
+    }
+
+    private boolean validate(User u){
+        if(u.cf.equals("") || u.nome.equals("") || u.cognome.equals("") || u.password.equals("")){
+            return false;
+        }else {
+            if(userDao.getUserByDB(u.cf) != null)
+                return false;
+            return true;
+        }
+
+
     }
 }

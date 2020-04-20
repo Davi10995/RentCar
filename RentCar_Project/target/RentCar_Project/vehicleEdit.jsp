@@ -31,7 +31,7 @@
         <form action="editVehicle" method="post" >
             <input type="hidden" name="id" value="<c:out value='${veicolo.id}' />">
             <input type="hidden" name="prenotabile" value="<c:out value='${veicolo.prenotabile}' />">
-            Targa:<input type="text" name="targa"/><br/><br/>
+            Targa:<input type="text" name="targa" value="<c:out value='${veicolo.targa}' />"/><br/><br/>
             Casa Costruttrice:<select name="casa" value="<c:out value='${veicolo.casaCostrutt}' />">
             <option value="Audi">Audi</option>
             <option value="Citroen">Citroen</option>

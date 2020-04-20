@@ -33,7 +33,7 @@
             Nome:<input type="text" name="nome"/><br/><br/>
             Cognome:<input type="text" name="cognome"/><br/><br/>
             Password:<input type="text" name="password"/><br/><br/>
-            Data:<input type="date" name="data" max="datetime local"/><br/><br/>
+            Data:<input type="date" name="data" max="datetime local" value="2020-01-08"/><br/><br/>
             <input type="submit" value="Save" />
         </form>
     </div>

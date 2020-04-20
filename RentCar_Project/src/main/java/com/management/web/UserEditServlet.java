@@ -42,7 +42,8 @@ public class UserEditServlet extends HttpServlet {
 
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response)
-            throws ParseException{
+            throws ParseException, ServletException, IOException {
+        RequestDispatcher dispatcher=null;
         String cf = request.getParameter("cf");
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
@@ -51,8 +52,23 @@ public class UserEditServlet extends HttpServlet {
         Date data = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("data"));
         User user = new User(cf, nome, cognome,password, tipo, data);
         user.id = Integer.parseInt(request.getParameter("id"));
-        userDao.updateUser(user);
+        if(validate(user)){
+            userDao.updateUser(user);
+        }else {
+            dispatcher = request.getRequestDispatcher("/errorUser.jsp");
+            dispatcher.forward(request,response);
+        }
     }
 
+    private boolean validate(User u) {
+        if (u.cf.equals("") || u.nome.equals("") || u.cognome.equals("") || u.password.equals("")) {
+            return false;
+        } else {
+            User user = userDao.getUserById(u.id);
+            if (userDao.getUserByDB(u.cf) != null && !user.cf.equals(u.cf))
+                return false;
+            return true;
+        }
+    }
 
 }

@@ -28,8 +28,9 @@
 </div>
 <div align="center">
     <h1>STAI PER ELIMINARE <c:out value='${user.nome}'/> <c:out value='${user.cognome}' />, SEI SICURO?</h1>
-    <a href="${pageContext.request.contextPath}/deleteUser?id=<c:out value='${user.id}' />" class="button buttonYes">Si</a>
-    <a href="${pageContext.request.contextPath}/list" class="button buttonNo">No</a>
+    <button onclick="window.location.href = '/deleteUser?id=<c:out value='${user.id}' />'">Si</button>
+<%--    <a href="${pageContext.request.contextPath}/deleteUser?id=<c:out value='${user.id}' />" class="button buttonYes">Si</a>--%>
+    <button onclick="window.location.href = 'list';">No</button>
 </div>
 </body>
 </html>
