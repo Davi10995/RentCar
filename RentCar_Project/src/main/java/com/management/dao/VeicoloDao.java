@@ -118,7 +118,11 @@ public class VeicoloDao {
             }
             e.printStackTrace();
         }
-        return veicoli.get(0);
+        if(veicoli.size() > 0) {
+            return veicoli.get(0);
+        }else{
+            return null;
+        }
     }
 
     /**

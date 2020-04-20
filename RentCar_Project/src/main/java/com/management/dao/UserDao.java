@@ -103,7 +103,6 @@ public class UserDao {
             Query query = session.createQuery("from User u where u.cf = :cf");
             query.setParameter("cf", cf);
             listOfUser = query.list();
-            user = listOfUser.get(0);
             // commit transaction
             transaction.commit();
         } catch (Exception e) {
@@ -112,7 +111,11 @@ public class UserDao {
             }
             e.printStackTrace();
         }
-        return user;
+        if(listOfUser.size() > 0) {
+            return listOfUser.get(0);
+        }else {
+            return null;
+        }
     }
 
     public User getUserById(int id) {

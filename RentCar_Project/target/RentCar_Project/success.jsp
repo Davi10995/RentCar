@@ -7,11 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Success</title>
-</head>
-<body>
-<h1 style="text-align: center">OPERAZIONE COMPLETATA CON SUCCESSO </h1>
-   <a style="align-content: center" href="list"><input type="submit" value="Torna alla Home" /></a>
-</body>
+    <head>
+        <title>Success</title>
+    </head>
+    <body>
+        <div align="center">
+            <h1 >OPERAZIONE COMPLETATA CON SUCCESSO </h1>
+            <a href="list"><input type="submit" value="Torna alla Home" /></a>
+        </div>
+    </body>
 </html>
